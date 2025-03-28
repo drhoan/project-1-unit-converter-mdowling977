@@ -1,0 +1,221 @@
+#Temp Formulas
+def fahrenheit_to_celsius(f):
+    return (f - 32) * 5 / 9
+
+def celsius_to_fahrenheit(c):
+    return c * 9/5 + 32
+
+def celsius_to_kelvin(ce):
+    return ce + 273.15
+
+def kelvin_to_celsius(ke):
+    return ke - 273.15
+
+def fahrenheit_to_kelvin(fa):
+    return (fa - 32) * 5/9 + 273.15
+
+def kelvin_to_fahrenheit(k):
+    return (k - 273.15) * 9/5 + 32
+
+#Weight Formulas
+def pounds_to_kilograms(p):
+    return p * 0.453592
+
+def kilograms_to_pounds(kg):
+    return kg * 2.20462
+
+def pounds_to_ounces(lb):
+    return lb * 16
+
+def ounces_to_pounds(o):
+    return o * 0.0625
+
+def kilogram_to_ounces(kgs):
+    return kgs * 35.274
+
+def ounces_to_kilogram(oz):
+    return oz * 0.0283495
+
+#Distance Formulas
+def miles_to_km(m):
+    return m * 1.60934
+
+def km_to_miles(km):
+    return km * 0.621371
+
+def ft_to_miles(ft):
+    return ft * 0.000189394
+
+def miles_to_ft(mi):
+    return mi * 5280
+
+def km_to_ft(klm):
+    return klm * 3280.84
+
+def ft_to_km(fet):
+    return fet * 0.0003048
+
+def main():
+    print(f"Welcome to the Unit Converter!")
+    print(f"What would you like to convert?")
+    print(f"1. Distance")
+    print(f"2. Weight")
+    print(f"3. Temperature")
+    print(f"4. Quit")
+    
+    choice = input("Enter the number of your choice: ")
+        
+    if choice == "1":
+        convert_distance()
+    elif choice == "2":
+        convert_weight()
+    elif choice == "3":
+        convert_temp()
+    elif choice == "4":
+        print (f"Goodbye")
+        exit()
+    else:
+        print("Invalid choice. Please try again.")
+        retry = input("Would you like to try again? (yes or no): ")
+        if retry == "yes" or retry == "Yes":
+            main()
+        elif retry == "no" or retry == "No":
+            exit()
+        else: 
+            print("Invalid response. Sending you to the main menu.")
+        main()
+            
+# Distance conversion functions
+def convert_distance():
+    print(f"Distance conversion options:")
+    print(f"1. Miles to Kilometers")
+    print(f"2. Kilometers to Miles")
+    print(f"3. Feet to Miles")
+    print(f"4. Miles to Feet")
+    print(f"5. Kilometers to Feet")
+    print(f"6. Feet to Kilometers")
+    print(f"7. Quit")
+    option = input(f"Enter the number of your choice: ")
+    if option == "1":
+        miles = float(input("Enter distance in miles: "))
+        print(f"{miles} miles is {miles_to_km(miles)} kilometers.")
+    elif option == "2":
+        km = float(input("Enter distance in kilometers: "))
+        print(f"{km} kilometers is {km_to_miles(km)} miles.")
+    elif option == "3":
+        ft = float(input("Enter distance in feet: "))
+        print(f"{ft} feet is {ft_to_miles(ft)} miles.")
+    elif option == "4":
+        mi = float(input("Enter distance in miles: "))
+        print(f"{mi} miles is {miles_to_ft(mi)} feet.")
+    elif option == "5":
+        km = float(input("Enter distance in kilometers: "))
+        print(f"{km} kilometers is {km_to_ft(km)} feet.")
+    elif option == "6":
+        ft = float(input("Enter distance in feet: "))
+        print(f"{ft} feet is {ft_to_km(ft)} kilometers.")
+    elif option == "7":
+        print(f"Goodbye")
+        exit()
+    else:
+        print("Invalid choice. Please try again.")
+        retry = input("Would you like to try again? (yes or no): ")
+        if retry == "yes" or retry == "Yes":
+            main()
+        elif retry == "no" or retry == "No":
+            print("Goodbye")
+            exit()
+        else: 
+            print("Invalid response. Sending you to the main menu.")
+            main()
+
+# Weight conversion functions
+def convert_weight():
+    print(f"Weight conversion options:")
+    print(f"1. Pounds to Kilograms")
+    print(f"2. Kilograms to Pounds")
+    print(f"3. Pounds to Ounces")
+    print(f"4. Ounces to Pounds")
+    print(f"5. Kilograms to Ounces")
+    print(f"6. Ounces to Kilograms")
+    print(f"7. Quit")
+    option = input(f"Enter the number of your choice: ")
+    if option == "1":
+        pounds = float(input("Enter weight in pounds: "))
+        print(f"{pounds} lbs. is {pounds_to_kilograms(pounds)} kg.")
+    elif option == "2":
+        kg = float(input("Enter weight in Kilograms: "))
+        print(f"{kg} kg is {kilograms_to_pounds(kg)} lbs.")
+    elif option == "3":
+        pounds = float(input("Enter weight in pounds: "))
+        print(f"{pounds} lbs. is {pounds_to_ounces(pounds)} ounces.")
+    elif option == "4":
+        ounces = float(input("Enter weight in ounces: "))
+        print(f"{ounces} ounces is {ounces_to_pounds(ounces)} lbs.")
+    elif option == "5":
+        kg = float(input("Enter weight in kilograms: "))
+        print(f"{kg} kg is {kilogram_to_ounces(kg)} ounces.")
+    elif option == "6":
+        ounces = float(input("Enter weight in ounces: "))
+        print(f"{ounces} ounces is {ounces_to_kilogram(ounces)} kg.")
+    elif option == "7":
+        print(f"Goodbye")
+        exit()
+    else:
+        print("Invalid choice. Please try again.")
+        retry = input("Would you like to try again? (yes or no): ")
+        if retry == "yes" or retry == "Yes":
+            main()
+        elif retry == "no" or retry == "No":
+            print("Goodbye")
+            exit()
+        else: 
+            print("Invalid response. Sending you to the main menu.")
+            main()
+
+# Temp conversion functions
+def convert_temp():
+    print(f"Temperature Conversion Options:")
+    print(f"1. Fahrenheit to Celsius")
+    print(f"2. Celsius to Fahrenheit")
+    print(f"3. Celsius to Kelvin")
+    print(f"4. Kelvin to Celsius")
+    print(f"5. Fahrenheit to Kelvin")
+    print(f"6. Kelvin to Farenheit")
+    print(f"7. Quit")
+    option = input(f"Enter the number of your choice: ")
+    if option == "1":
+        f = float(input("Enter temperature in Farenheit: "))
+        print(f"{f} F is {fahrenheit_to_celsius(f)}")
+    elif option == "2":
+        c = float(input("Enter temperature in Celsius: "))
+        print(f"{c} C is {celsius_to_fahrenheit(c)} F.")
+    elif option == "3":
+        c = float(input("Enter temperature in Celsius: "))
+        print(f"{c} C is {celsius_to_kelvin(c)} K.")
+    elif option == "4":
+        k = float(input("Enter temperature in Kelvin: "))
+        print(f"{k} K is {kelvin_to_celsius(k)} C.")
+    elif option == "5":
+        f = float(input("Enter temperature in Fahrenheit: "))
+        print(f"{f} F is {fahrenheit_to_kelvin(f)} K.")
+    elif option == "6":
+        k = float(input("Enter temperature in Kelvin: "))
+        print(f"{k} K is {kelvin_to_fahrenheit(k)} F.")
+    elif option == "7":
+        print(f"Goodbye")
+        exit()
+    else:
+        print("Invalid choice. Please try again.")
+        retry = input("Would you like to try again? (yes or no): ")
+        if retry == "yes" or retry == "Yes":
+            main()
+        elif retry == "no" or retry == "No":
+            print("Goodbye")
+            exit()
+        else: 
+            print("Invalid response. Sending you to the main menu.")
+            main()
+
+if __name__ == "__main__":
+    main()

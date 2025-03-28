@@ -28,3 +28,5 @@ Result: 2.0 F is -16.666666666666668 C
 
 Enter task 1: temp, 2: weight, 3: distance (0 for quit): 0 <br>
 See you next time
+
+feet to miles, miles to km, temp from F to C, 
